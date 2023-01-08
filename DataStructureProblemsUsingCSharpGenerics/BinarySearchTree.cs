@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace DataStructureProblemsUsingCSharpGenerics
 {
-    internal class BinarySearchTree<T> where T: IComparable<T>
+    internal class BinarySearchTree<T> where T: IComparable<T> //CLASS
     {
         public T NodeData { get; set; }
         public BinarySearchTree<T> LeftTree { get; set; }
         public BinarySearchTree<T> RightTree { get; set; }
-        public BinarySearchTree(T nodeData)
+        public BinarySearchTree(T nodeData) //CONSTRUCTOR
         {
             this.NodeData = nodeData;
             this. LeftTree = null;
             this.RightTree = null;
         }
         int leftCount = 0, rightCount = 0;
-        public void Insert(T item)
+        public void Insert(T item)  //METHOD FOR INSERTING
         {
             T CurrentNodeValue=this.NodeData;
             if (CurrentNodeValue.CompareTo(item)>0)
@@ -36,7 +36,7 @@ namespace DataStructureProblemsUsingCSharpGenerics
                     this.RightTree.Insert(item);
             }
         }
-        public void Display()
+        public void Display() //METHOD FOR DISPLAYING
         {
             if(this.LeftTree!= null)
             {
@@ -50,11 +50,11 @@ namespace DataStructureProblemsUsingCSharpGenerics
                 this.RightTree.Display();
             }
         }
-        public void GetSize()
+        public void GetSize()   // METHOD FOR GRTTING SIZE
         {
             Console.WriteLine("Size"+" "+(1+this.leftCount+this.rightCount));
         }
-        public bool IfExists(T element, BinarySearchTree<T> node)
+        public bool IfExists(T element, BinarySearchTree<T> node) 
         {
             bool result = false;
             if (node == null)

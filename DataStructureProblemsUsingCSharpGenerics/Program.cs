@@ -18,9 +18,11 @@ namespace DataStructureProblemsUsingCSharpGenerics
                    CountNumbOfOccurence(paragraph);
                     break;
                 case 2:
+                    //UC1
                     BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(56);
                     binarySearch.Insert(30);
                     binarySearch.Insert(70);
+                    //UC2
                     binarySearch.Insert(22);
                     binarySearch.Insert(60);
                     binarySearch.Insert(40);
@@ -33,6 +35,9 @@ namespace DataStructureProblemsUsingCSharpGenerics
                     binarySearch.Insert(16);
                     binarySearch.Display();
                     binarySearch.GetSize();
+                    //UC3
+                    bool result = binarySearch.IfExists(63, binarySearch);
+                    Console.WriteLine(result);
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
