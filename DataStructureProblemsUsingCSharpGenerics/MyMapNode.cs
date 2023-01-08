@@ -26,7 +26,7 @@ namespace DataStructureProblemsUsingCSharpGenerics
             protected int GetArrayPosition(K key)
             {
                 int hash = key.GetHashCode(); //637362
-                int position = hash % size; // 0 to 4
+                int position = hash % size; 
                 return Math.Abs(position);
             }
 

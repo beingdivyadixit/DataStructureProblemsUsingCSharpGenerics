@@ -8,7 +8,8 @@ namespace DataStructureProblemsUsingCSharpGenerics
         {
             Console.WriteLine("Welcome to Data Structure Problems Using C-Sharp Generics");
             Console.WriteLine("----------------------------------------------------------");
-            string paragraph = "To be or not to be";
+            //string paragraph = "To be or not to be";    //--UC1
+            string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
             CountNumbOfOccurence(paragraph);
 
         }
