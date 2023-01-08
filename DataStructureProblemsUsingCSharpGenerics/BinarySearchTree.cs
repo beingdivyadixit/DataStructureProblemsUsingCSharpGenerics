@@ -54,6 +54,31 @@ namespace DataStructureProblemsUsingCSharpGenerics
         {
             Console.WriteLine("Size"+" "+(1+this.leftCount+this.rightCount));
         }
-       
+        public bool IfExists(T element, BinarySearchTree<T> node)
+        {
+            bool result = false;
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Found the element in BST" + " " + node.NodeData);
+                result = true;
+            }
+            else
+            {
+                Console.WriteLine("Current element is {0} in BST", node.NodeData);
+            }
+            if(element.CompareTo(node.NodeData) < 0)
+            {
+                IfExists(element, node.LeftTree);
+            }
+            if(element.CompareTo(node.NodeData) > 0)
+            {
+                IfExists(element, node.RightTree);
+            }
+            return result;
+        }
     }
 }
