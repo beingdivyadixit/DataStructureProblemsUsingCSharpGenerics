@@ -7,10 +7,27 @@ namespace DataStructureProblemsUsingCSharpGenerics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Data Structure Problems Using C-Sharp Generics");
-            Console.WriteLine("----------------------------------------------------------");
-            //string paragraph = "To be or not to be";    //--UC1
-            string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-            CountNumbOfOccurence(paragraph);
+            Console.WriteLine("Enter-\n1: for Hash Tables\n2: for BST");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                   Console.WriteLine("----------------------------------------------------------");
+                   //string paragraph = "To be or not to be";    //--UC1
+                   string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+                   CountNumbOfOccurence(paragraph);
+                    break;
+                case 2:
+                    BinarySearchTree<int> binarySearch = new BinarySearchTree<int>(56);
+                    binarySearch.Insert(30);
+                    binarySearch.Insert(70);
+                    binarySearch.Display();
+                    binarySearch.GetSize();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    break;
+            }
 
         }
         public static void CountNumbOfOccurence(string paragraph)
